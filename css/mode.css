@@ -1,0 +1,79 @@
+.dark{ 
+    background-color: rgb(3, 3, 25); 
+    color: whitesmoke; 
+}
+.dark h1{
+  color: #fff
+}
+
+.dark .swiper-slide {
+    color: white;
+}
+
+.dark input {
+}
+
+.dark .navbar {
+    background-color: rgb(4, 66, 87);
+}
+
+.dark .socials {
+    background-color: rgb(2, 49, 64);
+}
+
+.theme-switch-wrapper{
+    display: flex;
+    align-items: center;  
+    float: right;                      
+}        
+.theme-switch{
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+    text-align: right;
+}
+.theme-switch input{
+    display:none;
+}
+.slider{
+    background-color: #cccccc98;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+.slider:before{
+    background-color: rgb(2, 2, 39);
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+input:checked + .slider{
+    background-color: #66bb6a;
+}
+input:checked + .slider:before{
+    transform: translateX(26px);
+}
+.slider.round{
+    border-radius: 34px;
+}
+.slider.round:before{
+    border-radius: 50%;
+}
+
+.typewrite {
+    margin-top: 50px;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+
+}
