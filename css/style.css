@@ -125,11 +125,12 @@ nav.menu-btn {
 
 .pic {
   height: 150px;
-  width: 120px;
+  width: 160px;
   border-radius: 100%;
   display: flex;
   margin: 0px auto;
 }
+
 
 @keyframes float {
   0% {
