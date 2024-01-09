@@ -323,6 +323,10 @@
     <script src="animation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./gsap-public/umd/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-16esztaSRp"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-I"></script>
+    <script src="https://unpkg.com/split-type"></script>
 
 <!-- Initialize Swiper -->
 
@@ -382,6 +386,30 @@ var swiper = new Swiper(".mySwiper", {
     loop: true,
 
   });
+
+        gsap.registerPlugin(ScrollTrigger);
+
+const splitTypes = document.querySelector('.aboutInfo')
+
+splitTypes.forEach((char,i) => {
+
+
+  const text = new SplitType(char, { types: 'chars'})
+
+  gsap.from(text.chars, {
+    scrollTrigger: {
+      trigger: char,
+      start: 'top 80%',
+      end: 'top 20%',
+      pin: true,
+      scrub: true,
+      markers: false,
+    },
+    opacity: 0.2,
+    stagger: 0.1,
+  })
+})
+
        
     </script>
 </body>
